@@ -1,0 +1,116 @@
+@charset 'utf-8';
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NanumSquare",sans-serif;
+}
+ul, li, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+header .inner {
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 40px;
+  
+}
+header h1 span {
+  font-size: 50px;
+  font-style: italic;
+  color: #314085;
+  margin-right: 4px;
+}
+header h1 a {
+  color: #333;
+  font-weight: 800;
+}
+header .am {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+header .am a {
+  font-size: 20px;
+  color: #53a6a0;
+  font-weight: 600;
+}
+header .tel {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+header .tel .fas {
+  margin-right: 6px;
+  font-size: 30px;
+  color: #ff7200;
+  transform: rotate(-30deg);
+}
+
+main .visual {
+  width: 100%;
+  background: #efeefc;
+  border-top: 10px solid #5e77b5;
+}
+main .visual .inner {
+  width: 1180px;
+  height: 290px;
+  position: relative;
+  margin: 0 auto;
+}
+main .visual .pic {
+  position: absolute;
+  left: 80px;
+  bottom: 0;
+  width: 250px;
+  height: 250px;
+}
+main .visual .text {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+}
+main .visual .text .text1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+main .visual .text .text1 span {
+  color: #fd3278;
+  font-weight: 800;
+}
+main .visual .text .text2 {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #822d49;
+  font-weight: bold;
+}
+main .visual .text .text2 span {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+}
