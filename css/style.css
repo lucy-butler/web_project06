@@ -15,7 +15,11 @@ a {
   text-decoration: none;
   outline: 0;
 }
-
+.hide {  
+  position: absolute;
+  text-indent: -99999px;
+  overflow: hidden;
+}
 header {
   width: 100%;
 }
@@ -73,9 +77,12 @@ header .tel .fas {
 
 main .visual {
   width: 100%;
-  background: #efeefc;
   border-top: 10px solid #5e77b5;
+  background-color: #fff;
+  background-image: linear-gradient(45deg, #efeefc 33%, transparent 33%, transparent 66%, #efeefc 66%),linear-gradient(135deg, #efeefc 33%, transparent 33%, transparent 66%, #efeefc 66%);
+  background-size: 4px 4px;
 }
+
 main .visual .inner {
   width: 1180px;
   height: 290px;
@@ -113,4 +120,170 @@ main .visual .text .text2 span {
   display: block;
   margin-top: 10px;
   font-size: 20px;
+}
+main .content {
+  margin-bottom: 10px;
+}
+main .content .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #f5e3e3;
+}
+main .content .left_cont {
+  margin-right: 20px;
+}
+main .content .left_cont h3 {
+  margin-bottom: 2px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  color: #822d49;
+}
+main .content .left_cont p {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ff0356;
+  text-align: center;
+}
+main .content .left_cont form {
+  margin: 20px auto;
+  width: 70%;
+}
+main .content .left_cont .form-box label {
+  display: inline-block;
+  padding: 10px 0;
+  width: 80px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main .content .left_cont .form-box:first-child input {
+  width: 212px;
+}
+main .content .left_cont .form-box input {
+  padding: 2px;
+  height: 30px;
+  outline: none;
+}
+main .content .left_cont .form-box input[type=button] {
+  width: 36px;
+  height: 30px;
+  color: #fff;
+  background: #333132;
+  border: none;
+  cursor: pointer;
+}
+main .content .left_cont .form-box select {
+  height: 30px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+main .content .left_cont .form-check {
+  padding: 10px 0;
+  text-align: center;  
+}
+main .content .left_cont .form-check input {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+main .content .left_cont button {
+  margin-top: 20px;
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+  font-weight: 700;
+  background: #0c5aa4;
+  color: #fff;
+  letter-spacing: -1px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+}
+main .content .left_cont button i {
+  margin-left: 10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+main .content .right_cont {
+  position: relative;
+  padding: 10px 20px;
+  background: #fff;
+  margin-right: 10px;
+  text-align: center;
+}
+main .content .right_cont h3 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f23da;
+}
+main .content .right_cont p {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 22px;
+  font-weight: 500;
+}
+main .content .right_cont p span {
+  color: #1f23da;
+  font-weight: bold;
+}
+main .content .right_cont ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+main .content .right_cont li {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  border: 2px solid #fcaf17;
+  border-radius: 20px;
+}
+main .content .right_cont li div {
+  height: 50px;
+  border-bottom: 1px solid #c6c6c6;
+}
+main .content .right_cont li div img {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+}
+main .content .right_cont li span {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 130px;
+  padding: 4px 10px;
+  font-size: 18px;
+  background: #f4f2f3;
+  color: #a89a9a;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .content .right_cont li span i {
+  vertical-align: top;
+  margin-left: 6px;
+}
+main .counseling .inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #1e4d82;
+}
+main .counseling .inner article {
+  width: 380px;
+  background: #fff;
+  border-radius: 4px;
 }

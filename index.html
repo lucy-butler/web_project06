@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-  <header id="header">
+  <header>
     <div class="inner">
       <h1><a href="#"><span>암</span>보험몰</a></h1>
       <p class="am"><a href="#">암보험정보관</a></p>
       <p class="tel"><i class="fas fa-phone-volume"></i>080-999-9999</p>
     </div>
   </header>
-  <main id="main">
+  <main>
     <div class="visual">
       <div class="inner">
         <div class="pic"><img src="/image/doctor.png" alt="의사이미지"></div>
@@ -27,35 +27,105 @@
       </div>
     </div>
     <div class="content">
+      <h2 class="hide">보험료 계산</h2>
       <div class="inner">
         <div class="left_cont">
-
+          <h3>보험사별 암보험</h3>
+          <p>보험료 비교견적 서비스</p>
+          <form action="#">
+            <div class="form-box">
+              <label for="name">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</label>
+              <input type="text" name="name" id="name">
+            </div>
+            <div class="form-box">
+              <label for="birth">생년월일</label>
+              <input type="text" id="birth">
+              <select name="sex" id="sex">
+                <option value="선택">성별</option>
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+              </select>
+            </div>
+            <div class="form-box">
+              <label for="phone">전화번호</label>
+              <select name="phone">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+              </select>
+              <input type="tel" id="phone">
+              <input type="button" value="인증">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="check">
+              <label for="check">개인정보 수집 동의</label>
+            </div>
+            <button type="submit">보험료 계산하기<i class="fas fa-play"></i></button>
+          </form>
         </div>
         <div class="right_cont">
-
+          <h3>보험료 계산 결과</h3>
+          <p>보험나이 <span>0</span>세</p>
+          <ul>
+            <li>
+              <div><img src="./image/01_logo.png" alt="db손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/02_logo.png" alt="한화손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/03_logo.png" alt="현대해상"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/04_logo.png" alt="kb손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/05_logo.png" alt="롯데손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/06_logo.png" alt="라이나생명"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/07_logo.png" alt="NH농협손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/08_logo.png" alt="mg손해보험"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+            <li>
+              <div><img src="./image/09_logo.png" alt="동양생명"></div>
+              <span>보험료확인<i class="fas fa-caret-right"></i></span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
     <div class="counseling">
+      <h2 class="hide">보험상담관련</h2>
       <div class="inner">
         <article>
           <div class="live">
-
+            <h3>실시간신청현황</h3>
           </div>
         </article>
         <article>
           <div class="event">
-
+            <h3>보험가입이벤트</h3>
           </div>
         </article>
         <article>
           <div class="fastcounsel">
-
+            <h3>빠른상담신청</h3>
           </div>
         </article>
-        <div class="banner">
-
-        </div>
       </div>
     </div>
     <div class="list">
@@ -89,7 +159,7 @@
       </div>
     </div>
   </main>
-  <footer id="footer">
+  <footer>
     <div class="inner">
       <p class="ft_logo">DISCODE</p>
       <address>
