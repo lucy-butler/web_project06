@@ -126,8 +126,9 @@ main .content {
 }
 main .content .inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  display: -ms-grid;
+  grid-template-columns: 510px 1fr;
+  -ms-grid-columns: 510px 1fr;
   width: 1180px;
   margin: 0 auto;
   padding: 10px 0;
@@ -135,6 +136,8 @@ main .content .inner {
 }
 main .content .left_cont {
   margin-right: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
 }
 main .content .left_cont h3 {
   margin-bottom: 2px;
@@ -161,8 +164,14 @@ main .content .left_cont .form-box label {
   font-size: 18px;
   font-weight: 600;
 }
-main .content .left_cont .form-box:first-child input {
+main .content .left_cont .form-box:nth-child(1) input {
   width: 212px;
+}
+main .content .left_cont .form-box:nth-child(2) input {
+  width: 158px;
+}
+main .content .left_cont .form-box:nth-child(3) input {
+  width: 158px;
 }
 main .content .left_cont .form-box input {
   padding: 2px;
@@ -216,6 +225,8 @@ main .content .right_cont {
   background: #fff;
   margin-right: 10px;
   text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
 }
 main .content .right_cont h3 {
   margin-bottom: 10px;
@@ -235,19 +246,22 @@ main .content .right_cont p span {
   font-weight: bold;
 }
 main .content .right_cont ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 main .content .right_cont li {
+  display: flex;
+  flex-basis: 32%;
   position: relative;
-  width: 200px;
   height: 100px;
+  margin-bottom: 8px;
   background: #fff;
   border: 2px solid #fcaf17;
   border-radius: 20px;
 }
 main .content .right_cont li div {
+  width: 100%;
   height: 50px;
   border-bottom: 1px solid #c6c6c6;
 }
@@ -276,14 +290,275 @@ main .content .right_cont li span i {
 }
 main .counseling .inner {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
   width: 1180px;
-  margin: 0 auto;
-  padding: 10px;
+  margin: 0 auto 10px;
+  padding: 20px 0;
   background: #1e4d82;
 }
+main .counseling .inner article:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+main .counseling .inner article:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+main .counseling .inner article:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
 main .counseling .inner article {
+  position: relative;
   width: 380px;
+  height: 250px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 5px;
+  margin-left: 6px;
+}
+main .counseling .inner article h3 {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  background: #bd3737;
+  border-radius: 4px 4px 0 0;
+}
+main .counseling .inner article:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url(../image/pig.jpg) no-repeat;
+  width: 100px;
+  height: 83px;
+  border-radius: 0 0 4px 0;
+}
+main .counseling .inner article:nth-child(2) h3 {
+  background: #40aac1;
+}
+main .counseling .inner article .live ul {
+  text-align: center;
+}
+main .counseling .inner article .live ul li:first-child {
+  margin-top: 8px;
+}
+main .counseling .inner article .live li {
+  font-size: 14px;
+  margin: 6px 0;
+}
+main .counseling .inner article .live li span {
+  padding: 2px;
+  margin-left: 20px;
+  color: #fff;
+}
+main .counseling .inner article .live li .p {
+  background: #e54ec8;
+}
+main .counseling .inner article .live li .s {
+  background: #6899cb;
+}
+main .counseling .inner article .live li .t {
+  background: #84c239;
+}
+main .counseling .inner article .event p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #655959;
+  padding: 16px;
+  line-height: 24px;
+  z-index: 100;
+}
+main .counseling .fastcounsel form {
+  width: 80%;
+  margin: 20px auto 0 auto;
+}
+main .counseling .fastcounsel .form-box label {
+  display: inline-block;
+  padding: 8px 0;
+  width: 80px;
+  font-size: 18px;
+}
+main .counseling .fastcounsel .form-box:nth-child(1) input {
+  width: 204px;
+}
+main .counseling .fastcounsel .form-box:nth-child(2) input {
+  width: 152px;
+}
+main .counseling .fastcounsel .form-box input {
+  height: 26px;
+  outline: none;
+}
+main .counseling .fastcounsel .form-box select {
+  height: 26px;
+}
+main .counseling .fastcounsel .form-check {
+  margin: 10px 0;
+  text-align: center;
+}
+main .counseling .fastcounsel .form-check input {
+  vertical-align: middle;
+  margin-top: -2px;
+  width: 16px;
+  height: 16px;
+}
+main .counseling .fastcounsel button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: #bd3737;
+  cursor: pointer;
+}
+main .list .inner {
+  width: 1180px;
+  margin: 0 auto;
+  border-top: 2px solid #1199a5;
+}
+main .list h2 {
+  padding: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #9fd6db;
+}
+main .list ul li:last-child {
+  border-bottom: none;
+}
+main .list ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+main .list li .b_logo {
+  width: 130px;
+  margin-left: 30px;
+}
+main .list li .b_logo img{
+  width: 100%;
+}
+main .list li .insurance {
+  width: 464px;
+  margin: 0 30px;
+  color: #4c4c4c;
+}
+main .list li .insurance dt {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #000;
+}
+main .list li .insurance dd {
+  font-size: 14px;
+}
+main .list li .insurance dd:last-child {
+  margin-top: 6px;
+  color: #bababa;
+}
+main .list li .condition {
+  width: 180px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  overflow: visible;
+  font-size: 14px;
+}
+main .list li .condition dt:nth-child(1), main .list li .condition dt:nth-child(5) {
+  border: 1px solid #0f57b1;
+  color: #0f57b1;
+}
+main .list li .condition dt:nth-child(3), main .list li .condition dt:nth-child(7) {
+  border: 1px solid #177010;
+  color: #177010;
+}
+main .list li .condition dt {
+  flex: 0 0 18%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  padding: 1px 0;
+  margin-bottom: 4px;
+}
+main .list li .condition dd {
+  flex: 0 0 70%;
+  margin-left: auto;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .list li .btn {
+  width: 256px;
+  margin: 0 30px;
+  text-align: center;
+}
+main .list li .btn button {
+  width: 80%;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .list li .btn button:nth-child(1) {
+  background: #bd3736;
+  margin-bottom: 10px;
+}
+main .list li .btn button:nth-child(2) {
+  background: #777a7f;
+}
+footer {
+  width: 100%;
+  padding: 80px 0px;
+  background: #ededed;
+}
+footer .inner {
+  width: 1180px;
+  margin: 0px auto;
+}
+footer .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .inner .ft_logo {
+  color: #999; 
+  float: left;
+}
+footer .inner ul {
+  float: right;
+}
+footer .inner ul li {
+  float: left; margin-left: 30px;
+}
+footer .inner ul li a {
+  color: #888;
+}
+footer .inner address {
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+  border-top: 1px solid #777;
+  padding-top: 40px;
+  font: 14px/1.7 "arial";
+  color: #888;
+  letter-spacing: 1px;
+}
+footer .inner .copy {
+  width: 100%;
+  float: left;
+  font-size: 12px;
+  color: #777;
+  letter-spacing: 1px;
+  margin-top: 30px;
 }
